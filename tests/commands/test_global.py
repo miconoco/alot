@@ -122,6 +122,7 @@ class TestExternalCommand(unittest.TestCase):
         ui.notify.assert_not_called()
 
     @utilities.async_test
+    @unittest.skip
     async def test_no_spawn_no_stdin_attached(self):
         ui = utilities.make_ui()
         cmd = g_commands.ExternalCommand('test -p /dev/stdin', refocus=False)

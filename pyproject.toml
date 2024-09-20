@@ -32,7 +32,6 @@ dependencies = [
     "twisted>=18.4.0",
     "python-magic",
     "configobj>=4.7.0",
-    "gpg>1.10.0",
 ]
 
 [project.optional-dependencies]
