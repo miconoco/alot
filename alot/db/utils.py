@@ -376,7 +376,7 @@ def render_part(part, field_key='copiousoutput'):
         # call handler
         stdout, _, _ = helper.call_cmd(cmdlist, stdin=stdin)
         if stdout:
-            rendered_payload = stdout
+            rendered_payload = "\n" + stdout
 
         # remove tempfile
         if tempfile_name:
