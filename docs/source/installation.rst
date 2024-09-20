@@ -37,7 +37,7 @@ A full list of dependencies is below:
 
 On Debian/Ubuntu these are packaged as::
 
-  python3-setuptools python3-magic python3-configobj python3-notmuch python3-urwid python3-urwidtrees python3-gpg python3-twisted python3-dev swig
+  python3-setuptools python3-magic python3-configobj python3-notmuch2 python3-urwid python3-urwidtrees python3-gpg python3-twisted python3-dev swig
 
 On Fedora/Redhat these are packaged as::
 
