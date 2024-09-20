@@ -56,8 +56,12 @@ class ThreadBuffer(Buffer):
         info['message_count'] = self.message_count
         info['thread_tags'] = self.translated_tags_str()
         info['intersection_tags'] = self.translated_tags_str(intersection=True)
-        info['mimetype'] = (
-            self.get_selected_message().get_mime_part().get_content_type())
+        try:
+            info['mimetype'] = (
+                self.get_selected_message().get_mime_part().get_content_type())
+        except AttributeError:
+            info['mimetype'] = (
+                next(self.get_selected_message().get_email().walk()).get_content_type())
         return info
 
     def get_selected_thread(self):
